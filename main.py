@@ -9,11 +9,11 @@ def is_valid(line: str) -> bool:
 
 
 def check_file_passwords(file_name: str) -> int:
-    with open("data.txt", "r") as f:
+    with open(file_name, "r") as f:
         result = 0
         for line in f:
             result += is_valid(line)
     return result
 
 if __name__ == '__main__':
-    print(check_file_passwords("data.txt"))
+    check_file_passwords("data.txt")
